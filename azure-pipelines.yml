@@ -7,7 +7,9 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-default
+ name: Default
+ demands:
+   - agent.name -equals ubuntu-default
 
 steps:
 - task: ArchiveFiles@2
